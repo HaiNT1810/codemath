@@ -2,41 +2,45 @@ import React, { Suspense, lazy } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import { FallbackView } from '../../_metronic/partials'
 import { DashboardWrapper } from '../pages/dashboard/DashboardWrapper'
-import { NotifyWrapper } from '../pages/notify/NotifyWrapper'
-import { SendFeedbackWrapper } from '../pages/sendFeedback/SendFeedbackWrapper'
-import { FaqDetailWrapper } from '../pages/thong-tin-phan-anh/FaqDetailWrapper'
 import { SignupWrapper } from '../pages/auth/SignupWrapper'
-import { AboutWrapper } from '../pages/about/AboutWrapper'
-import { DatabaseSystemWrapper } from '../pages/database-system/DatabaseSystemWrapper'
-import { InteractWrapper } from '../pages/interact/InteractWrapper'
-import { NewWrapper } from '../pages/news/NewWrapper'
-import { NewsDetailWrapper } from '../pages/news/NewsDetailWrapper'
-import { ProfileWrapper } from '../pages/auth/ProfileWrapper'
-import { AssetDetailWrapper } from '../pages/asset/AssetDetailWrapper'
-import { NotifyOrganizationWrapper } from '../pages/notifyOrganization/NotifyOrganizationWrapper'
-import { NotifyDetailWrapper } from '../pages/notifyDetail/NotifyDetailWrapper'
 
-// import {StatisticalWrapper} from '../pages/statistical/StatisticalWrapper';
+import { MissionWrapper } from '../pages/about/MissionWrapper'
+import { OverallDataWrapper } from '../pages/overall-data/OverDataWrapper'
+import { FeedbackWrapper } from '../pages/interactive/FeedbackWrapper'
+import { FunctionWrapper } from '../pages/about/FunctionWrapper'
+import { ContactWrapper } from '../pages/interactive/ContactWrapper'
+import { PolicyWrapper } from '../pages/policy/PolicyWrapper'
+import { PolicyDetail } from '../pages/policy/PolicyDetail'
+import { RecruitWrapper } from '../pages/recruit/RecruitWrapper'
+// import { GuideWrapper } from '../pages/guide/GuideWrapper'
+import { RecruitDetail } from '../pages/recruit/RecruitDetail'
+import { TreePageWrapper } from '../pages/tree-page/TreePageWrapper'
+import { NotificationDetail } from '../pages/notification/NotificationDetail'
+import { QuestionWrapper } from '../pages/question/QuestionWrapper'
+import { WorkerWrapper } from '../pages/worker/WorkerWrapper'
 
 export function PrivateRoutes() {
   return (
     <Suspense fallback={<FallbackView />}>
       <Switch>
         <Route path='/home' component={DashboardWrapper} />
-        <Route path='/about' component={AboutWrapper} />
-        <Route path='/feedback' component={SendFeedbackWrapper} />
-        <Route path='/thong-tin-phan-anh/:id' component={FaqDetailWrapper} />
-        <Route path='/tai-san-dau-gia/:id' component={AssetDetailWrapper} />
-        <Route path='/database-system/:lv' component={DatabaseSystemWrapper} />
-        <Route path='/database-system' component={DatabaseSystemWrapper} />
-        <Route path='/thong-bao' component={NotifyWrapper} />
-        <Route path='/newsdetail/:id' component={NewsDetailWrapper} />
-        <Route path='/news' component={NewWrapper} />
-        <Route path='/profile' component={ProfileWrapper} />
-        <Route path='/tb-lua-chon-tcdg' component={NotifyOrganizationWrapper} />
-        <Route path='/chi-tiet-thong-bao-lua-chon-tcdg/:id' component={NotifyDetailWrapper} />
+        <Route path='/about/funtion' component={FunctionWrapper} />
+        <Route path='/about/misson' component={MissionWrapper} />
+        <Route path='/about' component={FunctionWrapper} />
+        <Route path='/overall-data' component={OverallDataWrapper} />
+        <Route path='/interactive/feedback' component={FeedbackWrapper} />
+        <Route path='/interactive/contact' component={ContactWrapper} />
+        <Route path='/interactive' component={FeedbackWrapper} />
+        <Route path='/policy/:id' component={PolicyDetail} />
+        <Route path='/policy' component={PolicyWrapper} />
+        <Route path='/recruit/:id' component={RecruitDetail} />
+        <Route path='/recruit' component={RecruitWrapper} />
+        <Route path={'/notify/:id'} component={NotificationDetail} />
+        <Route path='/tree-page' component={TreePageWrapper} />
+        <Route path='/question' component={QuestionWrapper} />
         <Route path='/signup' component={SignupWrapper} />
-        <Route path='/tuong-tac/:id' component={InteractWrapper} />
+        <Route path='/wp/:id' component={WorkerWrapper} />
+        <Route path='/wp' component={WorkerWrapper} />
         <Redirect exact from='/' to='/home' />
         <Redirect to='error/404' />
       </Switch>

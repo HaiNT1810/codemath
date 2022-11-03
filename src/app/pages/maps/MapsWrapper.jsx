@@ -52,7 +52,6 @@ const MapsPage = () => {
   }, [])
 
   const AnyReactComponent = ({ item }) => (
-    console.log(item),
     <OverlayTrigger
       trigger="click"
       key={item.ID}

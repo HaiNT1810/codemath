@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as Yup from 'yup'
 import clsx from 'clsx'
-import { Link, useHistory, Redirect, Switch, Route } from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
 
 import { useFormik } from 'formik'
 import * as auth from '../../app/modules/auth/redux/AuthRedux'
@@ -21,8 +21,8 @@ const loginSchema = Yup.object().shape({
 })
 
 const initialValues = {
-  userName: '',
-  password: '',
+  userName: 'admin',
+  password: '123456',
 }
 
 const Login = (props) => {
@@ -40,7 +40,7 @@ const Login = (props) => {
           let _err = data?.data?.error?.code ?? 500
           if (_err == 200) {
             let user = data?.data?.data ?? {}
-            user.userName = values.userName
+            user.UserName = values.userName
             setLoading(false)
             dispatch(auth.actions.login(user))
             setModalLogin(false)

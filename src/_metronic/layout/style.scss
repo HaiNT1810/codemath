@@ -1,5 +1,7 @@
+@import '/src/_metronic/layout/constance.scss';
+
 .header-menu-container {
-    background-color: #457cb3;
+    background-color: $primary-color;
     background-position: top right;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -16,15 +18,26 @@
         background: none !important;
         border-bottom: none !important;
 
+        .ant-menu-overflow-item {
+            padding: 0 15px !important;
+        }
+
         .ant-menu-item>span>a,
         .ant-menu-title-content,
         .ant-menu-submenu {
             color: rgb(255 255 255) !important;
             font-weight: 500;
             text-transform: uppercase;
+            font-size: 14px;
 
             a {
+                position: relative;
                 color: rgb(255 255 255) !important;
+
+                .anticon.anticon-caret-down {
+                    position: absolute;
+                    top: 2px;
+                }
             }
         }
 
@@ -55,10 +68,37 @@
     border: none;
 
     &>.header-content-contianer {
-        background: #fff;
         padding: 0;
         height: 100px;
         position: relative;
+        // background-image: url('../assets/images/background.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-attachment: fixed
+    }
+
+    .header-content-contianer {
+        .d-flex.align-items-center .flex-shrink-0 {
+            width: 100%;
+        }
+
+        .go-admin {
+            border: 1px solid $primary-color;
+            border-radius: 3px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 5px;
+            color: $text-color;
+            background-color: #fff;
+        }
+
+        .go-admin:hover {
+            color: #fff;
+            background: $primary-color;
+        }
     }
 
     .header-date-time {
@@ -66,38 +106,58 @@
     }
 
     .header-times {
-        color: #cc0000 !important;
+        color: $primary-color  !important;
         font-size: 25px !important;
         font-weight: 600;
     }
 }
 
+.header-bottom {
+    background: $second-color;
+    // background-image: url('../assets/images/background.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+
+    .container {
+        .header-bottom-wrapper {
+            padding: 5px 0 2px 0;
+            display: flex;
+            justify-content: space-between;
+            background: $second-color;
+
+            .header-bottom-right {
+                display: flex;
+            }
+        }
+    }
+}
+
 .head-top-acount {
     a {
-        color: #2f5e8e;
+        color: $primary-color;
         padding: 5px;
         display: inline-block;
     }
-}
 
-#kt_header_search_toggle {
-    .btn {
-        background-color: #63a1de;
+    a:hover {
+        color: $primary-color;
     }
 }
 
+
 .logo-qh {
     .logo {
-        background: linear-gradient(135deg, #6eaeed -13.05%, #457cb3 286.29%);
         text-align: center;
         position: absolute;
-        height: 139px;
         width: 126px;
         line-height: 124px;
         display: block;
         z-index: 999;
-        top: 10px;
-        border-bottom: 6px #cc0000 solid;
+        top: 8px;
+        border-radius: 50%;
+        overflow: hidden;
     }
 
     .logo-title {
@@ -108,32 +168,34 @@
             line-height: 1;
 
             h1 {
-                color: #336699;
-                line-height: 1.1;
+                font-size: 1.8rem;
+                font-weight: bolder;
+                color: $primary-color;
                 text-shadow:
-                    -0.0075em 0.0075em 0 mix(#fff, #56ff00, 94%),
-                    0.005em 0.005em 0 mix(#fff, #56ff00, 60%),
-                    0.01em 0.01em 0 mix(#fff, #56ff00, 62%),
-                    0.015em 0.015em mix(#fff, #56ff00, 64%),
-                    0.02em 0.02em 0 mix(#fff, #56ff00, 66%),
-                    0.025em 0.025em 0 mix(#fff, #56ff00, 68%),
-                    0.03em 0.03em 0 mix(#fff, #56ff00, 70%),
-                    0.035em 0.035em 0 mix(#fff, #56ff00, 72%);
+                    -0.0075em 0.0075em 0 mix(#fff, $primary-color, 94%),
+                    0.005em 0.005em 0 mix(#fff, $primary-color, 60%),
+                    0.01em 0.01em 0 mix(#fff, $primary-color, 62%),
+                    0.015em 0.015em mix(#fff, $primary-color, 64%),
+                    0.02em 0.02em 0 mix(#fff, $primary-color, 66%),
+                    0.025em 0.025em 0 mix(#fff, $primary-color, 68%),
+                    0.03em 0.03em 0 mix(#fff, $primary-color, 70%),
+                    0.035em 0.035em 0 mix(#fff, $primary-color, 72%);
             }
 
             p {
-                font-weight: bolder;
-                color: #cc0000;
-                font-size: 2rem;
+                font-size: 1.4rem;
+                color: $blue-color;
+                line-height: 1.1;
                 text-shadow:
-                    -0.0075em 0.0075em 0 mix(#fff, #e91e63, 94%),
-                    0.005em 0.005em 0 mix(#fff, #e91e63, 60%),
-                    0.01em 0.01em 0 mix(#fff, #e91e63, 62%),
-                    0.015em 0.015em mix(#fff, #e91e63, 64%),
-                    0.02em 0.02em 0 mix(#fff, #e91e63, 66%),
-                    0.025em 0.025em 0 mix(#fff, #e91e63, 68%),
-                    0.03em 0.03em 0 mix(#fff, #e91e63, 70%),
-                    0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
+                    -0.0075em 0.0075em 0 mix(#fff, $blue-color, 94%),
+                    0.005em 0.005em 0 mix(#fff, $blue-color, 60%),
+                    0.01em 0.01em 0 mix(#fff, $blue-color, 62%),
+                    0.015em 0.015em mix(#fff, $blue-color, 64%),
+                    0.02em 0.02em 0 mix(#fff, $blue-color, 66%),
+                    0.025em 0.025em 0 mix(#fff, $blue-color, 68%),
+                    0.03em 0.03em 0 mix(#fff, $blue-color, 70%),
+                    0.035em 0.035em 0 mix(#fff, $blue-color, 72%);
+
             }
         }
     }
@@ -232,47 +294,44 @@
     margin: 5px 0 10px;
 }
 
-.footer-title {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff
+.wrapper-content {
+    background: $white-color;
 }
+
+.modal-content {
+    form {
+        a {
+            color: $primary-color;
+        }
+
+        a:hover {
+            color: $hover-primary-color;
+        }
+
+        .btn-primary {
+            background: $primary-color;
+        }
+
+        .btn-primary:hover:focus:active {
+            background: $hover-primary-color  !important;
+        }
+
+        .btn-warning {
+            background: $second-color;
+        }
+    }
+}
+
 
 .footer {
-    background: #457cb3;
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    color: #fff;
-    font-style: 14px;
+    background: $primary-color;
+    color: $white-color;
+    padding: 10px 0;
+    text-align: center;
 
-    &>.container {
-        padding-top: 25px;
-    }
-
-    .coppyright {
-        background: rgba(#000, 0.15);
-        padding: 8px;
-    }
-}
-
-.footer-main-subscribe {
-    .input-group {
-        max-width: 438px;
-
-        input {
-            line-height: 1;
-            font-weight: normal;
-            padding: 0.4rem 0.7rem;
-            height: auto
-        }
-
-        .btn {
-            background-color: #245d96;
-            width: auto;
-            padding: 0.6rem 1.5rem !important;
-            height: auto;
-        }
+    .fb-item {
+        display: inline-block;
+        margin: 5px 15px;
     }
 }
 
@@ -298,13 +357,46 @@
     .header-menu-container {
         .navbar-nav {
             padding-left: 160px;
+
         }
     }
+}
+
+.home-icon {
+    font-size: 18px;
 }
 
 @media (max-width: 1366px) {}
 
 @media (max-width: 991px) {
+
+
+    .logo-qh {
+        .logo {
+            max-width: 70px;
+            height: auto;
+            line-height: inherit;
+            background: transparent;
+            border: none;
+            position: relative;
+            min-width: 70px;
+        }
+
+        .logo-title {
+            padding: 20px 0px 10px 10px;
+
+            article {
+                h1 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
     .navbar-expand .navbar-collapse.collapse:not(.show) {
         display: none !important;
     }
@@ -361,7 +453,7 @@
                 }
 
                 p {
-                    font-size: 1.2rem;
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -388,7 +480,7 @@
 
     #kt_header {
         .header-times {
-            font-size: 20px !important;
+            font-size: 18px !important;
         }
 
         &>.header-content-contianer {

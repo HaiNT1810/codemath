@@ -1,20 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx'
-import moment from 'moment'
-import React, { FC, useEffect, useState } from 'react'
-import { useIntl } from 'react-intl'
-import { useParams } from 'react-router-dom'
-import { requestPOST } from '../../../helpers/baseAPI'
-import { CONFIG } from '../../../helpers/config'
-import { KTSVG, toAbsoluteUrl } from '../../../_metronic/helpers'
-import { Navbar, Container, Nav, Modal } from 'react-bootstrap-v5'
+import {useState } from 'react'
+
+import { Modal } from 'react-bootstrap-v5'
 import { useDispatch, useSelector } from 'react-redux'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import * as auth from '../../modules/auth/redux/AuthRedux'
 import { register } from '../../modules/auth/redux/AuthCRUD'
 import { toast } from 'react-toastify'
-import { Link, useHistory, Redirect, Switch, Route } from 'react-router-dom'
+import { useHistory, Redirect, Switch } from 'react-router-dom'
 import { PageTitle } from '../../../_metronic/layout/core'
 
 const initialValues = {

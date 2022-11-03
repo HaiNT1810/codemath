@@ -109,7 +109,6 @@ const SendFeedbackPage = () => {
       fileString=fileArr?.join('##')
       formData.DinhKem=fileString
       handleOk(formData)
-      console.log(formData)
     }
   }
 

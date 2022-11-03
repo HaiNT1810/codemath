@@ -1,0 +1,35 @@
+@import '/src/_metronic/layout/constance.scss';
+
+.content-container {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    width: 100%;
+    min-height: calc(100vh - 235px);
+    form {
+
+        .ant-form-item-label {
+
+            .ant-form-item,
+            label {
+                height: 100%;
+            }
+        }
+
+        button {
+            border-radius: 5;
+            padding: 5px 12px;
+            width: 110;
+            margin-right: 20;
+            background: #34bfa3;
+            border-color: #34bfa3;
+        }
+        .ant-select.ant-select-in-form-item {
+    
+            .ant-select-selector {
+                border: 1px solid #d9d9d9;
+                height: 32px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

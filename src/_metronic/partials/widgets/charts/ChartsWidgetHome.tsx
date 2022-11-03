@@ -1,9 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Highcharts, {Series} from 'highcharts'
+import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import React, {useEffect, useState} from 'react'
-import {requestPOST, requestGET} from '../../../../../src/helpers/baseAPI'
-import {CONFIG} from '../../../../helpers/config'
+import React from 'react'
+import {requestPOST, requestGET} from '../../../../helpers/baseAPI'
 import {useHistory} from 'react-router-dom'
 import { toAbsoluteUrl} from '../../../helpers'
 
@@ -14,24 +13,7 @@ type Props = {
 
 const ChartsWidgetHome: React.FC<Props> = ({className, hightChat}) => {
   const history = useHistory()
-  // const [option, setOption] = useState({
-  //   DaXuLy: 0,
-  //   DangXuLy: 0,
-  //   QuaHan: 0,
-  // })
-  
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     var body = {
-  //       token:
-  //         'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDE0NTk0NjIsImV4cCI6MTY0MjM0ODY2Miwic3ViIjoiZGVtbzEiLCJoYXNocHdkIjoiVzJPZ2xzb3VDL0I5QVAyM0NIaEtoQT09IiwiY29udGV4dCI6eyJ1c2VyIjp7InVzZXJOYW1lIjoiZGVtbzEiLCJkaXNwbGF5TmFtZSI6ImRlbW8xIiwib3JnYW5pemF0aW9uSWQiOiIifX19.KUrKbbHwriqRe5m9j0k6o05exeZnxoZzgqJD1pYKK74',
-  //     }
-  //     let res = await requestPOST(CONFIG.PAHT_PATH + '/ThongKeXuLy', body)
-  //     let data = res?.data ?? []
-  //     setOption(data)
-  //   }
-  //   fetchData()
-  // }, [])
+ 
   
   let dt = new Array()
   dt = [

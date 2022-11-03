@@ -1,0 +1,88 @@
+@import '/src/_metronic/layout/constance.scss';
+
+.content-container {
+    width: 100%;
+    min-height: calc(100vh - 235px);
+    .page-header {
+        padding: 10px;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .article-content {
+        padding: 10px;
+    }
+    .vote-news {
+        margin-top: 10px;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+
+        .socical {
+            .btn-share {
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                background: $blue-color;
+                color: $white-color;
+                padding: 2px 6px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 76px;
+            }
+        }
+    }
+
+    .other-news {
+        .ant-card-bordered {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+
+            .ant-card-head {
+                min-height: 32px;
+                background: $second-color;
+                line-height: 32px;
+                padding-left: 5px;
+                border-left: 5px solid $primary-color;
+                border-bottom: 1px solid $primary-color;
+                .ant-card-head-title {
+                    padding: 0;
+
+                    span {
+                        color: $text-color
+                    }
+                }
+
+                
+            }
+            .ant-card-body {
+                padding: 12px 6px;
+                .list-other-news {
+                    list-style: none;
+                    padding-left: 0;
+                    a {
+                        .other-news-titles {
+                            color: $primary-color;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+
+    .comment {
+        padding: 10px;
+        display: flex;
+    }
+}

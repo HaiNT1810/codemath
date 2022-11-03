@@ -1,0 +1,9 @@
+@import '/src/_metronic/layout/constance.scss';
+.ant-tree-title {
+    a {
+        color: $text-color;
+    }
+    a:hover {
+        color: $hover-primary-color;
+    }
+}

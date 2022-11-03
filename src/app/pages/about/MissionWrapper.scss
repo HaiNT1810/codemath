@@ -1,0 +1,61 @@
+@import '/src/_metronic/layout/constance.scss';
+
+.content-container {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    width: 100%;
+    min-height: calc(100vh - 235px);
+    .page-header {
+        border-bottom: 1px solid $border-color;
+        .header-title {
+            word-spacing: 5px;
+            padding: 0 0 5px 0;
+            
+            color: $primary-color;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow:
+                -0.0075em 0.0075em 0 mix(#fff, $primary-color, 94%),
+                0.005em 0.005em 0 mix(#fff, $primary-color, 60%),
+                0.01em 0.01em 0 mix(#fff, $primary-color, 62%),
+                0.015em 0.015em mix(#fff, $primary-color, 64%),
+                0.02em 0.02em 0 mix(#fff, $primary-color, 66%),
+                0.025em 0.025em 0 mix(#fff, $primary-color, 68%),
+                0.03em 0.03em 0 mix(#fff, $primary-color, 70%),
+                0.035em 0.035em 0 mix(#fff, $primary-color, 72%);
+        }
+    }
+
+    .article-content {
+        p:first-child{
+            padding-top: 15px;
+        }
+        p {
+            
+            text-indent: 16px;
+            text-align: justify
+        }
+
+        .lead {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 16px;
+            text-indent: 0
+            
+            ;
+        }
+
+        .lead::first-letter {
+            float: left;
+            font-size: 400%;
+            color: $primary-color;
+            font-style: normal;
+            line-height: 36px;
+        }
+
+        .order {
+            font-weight: 600;
+        }
+    }
+}

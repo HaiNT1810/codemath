@@ -11,7 +11,6 @@ import {KTSVG} from '../../helpers'
 export function ScrollTop() {
   const {pathname} = useLocation()
   const isFirstRun = useRef(true)
-
   const pluginsReinitialization = () => {
     setTimeout(() => {
       StickyComponent.reInitialization()

@@ -1,25 +1,60 @@
-.card-searchform {
-    .scroll {
-        padding-top: 10px;
+@import '/src/_metronic/layout/constance.scss';
 
-        .nav-item {
-            position: relative;
-            .card-status {
-                width: 22px;
-                height: 22px;
-                line-height: 21px;
-                font-size: 10px;
-                top: -15px;
-                right: 15px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                transform: translate(10px, -6px);
+.content-page {
+    background: $white-color;
+
+    .industrial-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+        .industrial-map {
+            height: 650px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            // background-image: url('../../images/industrial.png');
+        }
+
+        #industrial-list {
+            position: absolute;
+            top: 18%;
+            left: 2%;
+            max-width: 280px;
+            .ant-list-items {
+                .ant-list-item {
+
+                    div {
+                        padding-left: 7px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .ant-list-item:hover {
+                    cursor: pointer;
+                    background-color: rgb(228, 228, 228);
+                }
+            }
+        }
+
+        .news-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-caption {
+            background-color: rgb(69 69 69 / 30%);
+            border-radius: 10px 10px 0 0;
+            bottom: 0 !important;
+            right: 5% !important;
+            left: 5% !important;
+            padding: 0.5rem 0.3rem !important;
+
+            h5 {
+                color: #fff;
             }
         }
     }
-}
-
-#viewmore :hover {
-    color: #1890ff  ;
 }

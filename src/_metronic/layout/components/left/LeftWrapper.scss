@@ -1,0 +1,136 @@
+@import '/src/_metronic/layout/constance.scss';
+
+.left-wrapper {
+    border: 1px solid $border-color;
+    // min-height: 700px;
+    .recruit {
+        min-height: 50px;
+
+        .recruit-header {
+            height: 32px;
+            background: $second-color;
+            line-height: 32px;
+            padding-left: 10px;
+
+            a {
+                color: $primary-color;
+                font-size: 16px;
+            }
+        }
+
+        .recruit-content {
+            height: 100px;
+        }
+    }
+
+    .vote {
+        min-height: 200px;
+
+        .vote-header {
+            height: 32px;
+            background: $primary-color;
+            line-height: 32px;
+            padding-left: 10px;
+            display: flex;
+
+            span {
+                margin-left: 5px;
+                color: $second-color;
+                font-size: 16px;
+            }
+
+        }
+
+        .vote-content {
+            background: $second-color;
+
+            .vote-title {
+                padding-left: 10px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+            }
+
+            .vote-list {
+                background: $white-color;
+                height: 100%;
+                width: 100%;
+                padding: 5px;
+
+                .antd-space {
+                    width: 100%;
+                    padding: 6px;
+
+                    .ant-space-item {
+                        width: 100%;
+                        border-bottom: 1px solid $border-color;
+                        height: 28px;
+                    }
+
+                    :last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .vote-bottom {
+                display: flex;
+                justify-content: space-evenly;
+                min-height: 40px;
+                align-items: center;
+
+                span {
+                    cursor: pointer;
+                    padding: 3px;
+                }
+
+                :first-child {
+                    padding-left: 7px;
+                }
+
+                :last-child {
+                    padding-right: 7px;
+                }
+            }
+        }
+    }
+
+    .video {
+        min-height: 50px;
+
+        .video-header {
+            height: 32px;
+            background: $primary-color;
+            line-height: 32px;
+            padding-left: 10px;
+
+            a {
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-left: 5px;
+                    color: $second-color;
+                    font-size: 16px;
+                }
+            }
+        }
+        .video-content {
+            .player-wrapper {
+                .react-player {
+                    padding-right: 1px;
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    margin-top: 10%;
+    .result-header {
+        font-size: 18px;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,15 @@
+@import '/src/_metronic/layout/constance.scss';
+
+.border-left {
+    border-left: 4px solid $primary-color;
+    a {
+        padding-left: 4px;
+    }
+}
+
+.breadcrumb-item {
+    color: $primary-color;
+    a{
+        color: $primary-color; 
+    }
+}
