@@ -130,38 +130,13 @@ const MasterLayout = ({ children }) => {
                       <Menu.Item key={"/home"}>
                         <Link to='/home'>Trang chủ</Link>
                       </Menu.Item>
-                      {/* <Menu.SubMenu key={"/about"} title={<Link to='/about'>Giới thiệu tổng quan <CaretDownOutlined /></Link>}>
-                        <Menu.Item key={"/about/funtion"} onClick={() => { history.push("/about/funtion") }}>
-                          Chức năng
-                        </Menu.Item>
-                        <Menu.Item key={"/about/misson"} onClick={() => { history.push("/about/misson") }}>
-                          Nhiệm vụ
-                        </Menu.Item>
-                      </Menu.SubMenu>
-                      <Menu.Item key={"/overall-data"}>
-                        <Link to='/overall-data'>Dữ liệu tổng thể</Link>
-                      </Menu.Item>
-                      <Menu.SubMenu key={"/interactive"} title={<Link to='/interactive'>Nhà nước công dân <CaretDownOutlined /></Link>}>
-                        <Menu.Item key={"/interactive/feedback"} onClick={() => { history.push("/interactive/feedback") }}>
-                          Góp ý
-                        </Menu.Item>
-                        <Menu.Item key={"/interactive/contact"} onClick={() => { history.push("/interactive/contact") }}>
-                          Liên hệ
-                        </Menu.Item>
-                      </Menu.SubMenu> */}
-                      {/* <Menu.Item key={"/policy"}>
-                        <Link to='/policy'>Cơ chế chính sách</Link>
-                      </Menu.Item> */}
-                      {/* <Menu.Item key={"#"}>
-                        <Link to='/wp'>Thông tin người lao động</Link>
-                      </Menu.Item> */}
                       <Menu.Item key={"/#"}>
                         <Link to='/#'>Bản đồ</Link>
                       </Menu.Item>
                       <Menu.Item key={"/recruit"}>
                         <Link to='/recruit'>Tuyển dụng</Link>
                       </Menu.Item>
-                      <Menu.Item key={"/#"}>
+                      <Menu.Item key={"/##"}>
                         <Link to='/#'>Hướng dẫn sử dụng</Link>
                       </Menu.Item>
                     </Menu>

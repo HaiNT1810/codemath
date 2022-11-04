@@ -4,9 +4,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import { requestGET } from '../../../../helpers/baseAPI'
-import { CONFIG } from '../../../../helpers/config'
-import InfiniteScroll from 'react-infinite-scroll-component';
 import './IndustrialList.scss'
 
 const IndustrialList = () => {

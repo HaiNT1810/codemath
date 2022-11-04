@@ -9,7 +9,7 @@ import {FC} from 'react'
 import {Switch} from 'react-router-dom'
 import {shallowEqual, useSelector} from 'react-redux'
 import {MasterLayout} from '../../_metronic/layout/MasterLayout'
-import {PrivateRoutes} from './PrivateRoutes'
+import {PublicRoutes} from './PublicRoutes'
 import {RootState} from '../../setup'
 
 
@@ -18,7 +18,7 @@ const Routes: FC = () => {
   return (
     <Switch>
       <MasterLayout>
-        <PrivateRoutes />
+        <PublicRoutes />
       </MasterLayout>
     </Switch>
   )

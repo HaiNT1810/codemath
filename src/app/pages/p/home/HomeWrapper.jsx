@@ -4,12 +4,9 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { useState, useEffect, useRef } from 'react'
 import { useIntl } from 'react-intl'
 import { useHistory } from "react-router-dom";
-
-
-import { PageTitle } from '../../../_metronic/layout/core'
-
-import './dashboard.scss'
-const DashboardPage = () => {
+import { PageTitle } from '../../../../_metronic/layout/core'
+import './home.scss'
+const HomePage = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const history = useHistory();
@@ -54,7 +51,7 @@ const DashboardPage = () => {
 }
 
 
-const DashboardWrapper = () => {
+const HomeWrapper = () => {
   const intl = useIntl()
   return (
     <>
@@ -69,11 +66,11 @@ const DashboardWrapper = () => {
         ]}
       >
       </PageTitle>
-      <DashboardPage />
+      <HomePage />
     </>
   )
 }
 
 
-export { DashboardWrapper }
+export { HomeWrapper }
 
